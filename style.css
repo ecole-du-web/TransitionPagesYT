@@ -1,0 +1,75 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.accueil1, .accueil2, .accueil3 {
+    width: 100vw;
+    height: 100vh;
+}
+.accueil1 {
+    background: url(ressources/img1.jpg);
+}
+.accueil2 {
+    background: url(ressources/img2.jpg);
+}
+.accueil3 {
+    background: url(ressources/img3.jpg);
+}
+
+nav ul {
+    height: 70px;
+    width: 100%;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    position: fixed;
+    z-index: 500;
+}
+nav ul li {
+    margin: 0 10px;
+}
+nav ul li a {
+    font-size: 25px;
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.cont-bandes {
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    pointer-events: none;
+    /* background: #000; */
+    z-index: 500;
+}
+.bande {
+    width: 10%;
+    height: 0%;
+}
+.bande:nth-child(even){
+    background: #333;
+}
+.bande:nth-child(odd){
+    background: #f1f1f1;
+}
+
+.wipe-transition {
+    width: 100vw;
+    height: 100vh;
+    background:linear-gradient(90deg, rgb(165, 165, 223),midnightblue) ;
+    position: absolute;
+    left: -100%;
+}
